@@ -13,8 +13,16 @@
       <img id="pano" src="StreetView360.jpg">
     </a-assets>
 
-    <!-- 3D Model -->
-    <a-entity gltf-model="#model" position="0 1.2 -2" scale="1 1 1"></a-entity>
+
+    <!-- Cámara con posición y rotación personalizada -->
+    <a-entity id="rig" position="200 1.6 0" rotation="-20 -40 0">
+      <a-camera look-controls wasd-controls></a-camera>
+    </a-entity>
+
+
+    <!-- 3D Model - posicionado en los botes de basura -->
+    <a-entity gltf-model="#model" position="280 -60 -90" scale="0.22 0.22 0.22" rotation="-85 130 0"></a-entity>
+
 
     <!-- 360 Environment -->
     <a-sky src="#pano" rotation="0 -90 0"></a-sky>
